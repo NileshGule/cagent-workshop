@@ -1,0 +1,20 @@
+version: "2"
+
+agents:
+  root:
+    instruction: You are an amazing developer
+    model: open-router-model
+    toolsets:
+      - type: todo
+      - type: shell
+      - type: filesystem
+
+models:
+  open-router-model:
+    provider: openai
+    model: gpt-4o
+    base_url: https://models.github.ai/inference
+    token_key: GITHUB_API_KEY
+    track_usage: false
+
+    

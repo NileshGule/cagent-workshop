@@ -1,0 +1,18 @@
+version: "2"
+
+agents:
+  root:
+    instruction: Talk like a pirate
+    model: open-router-model
+    toolsets:
+      - type: think
+
+models:
+  open-router-model:
+    provider: openai
+    model: xai/grok-3-mini
+    base_url: https://models.github.ai/inference
+    token_key: GITHUB_API_KEY
+    track_usage: false
+
+    
