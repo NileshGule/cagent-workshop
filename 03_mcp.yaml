@@ -2,15 +2,14 @@ version: "2"
 
 agents:
   root:
-    instruction: You are an amazing developer
-    model: open-router-model
+    instruction: Summarize URLs for users
+    model: github-model
     toolsets:
-      - type: todo
-      - type: shell
-      - type: filesystem
+      - type: mcp
+        ref: docker:fetch
 
 models:
-  open-router-model:
+  github-model:
     provider: openai
     model: gpt-4o
     base_url: https://models.github.ai/inference

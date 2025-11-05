@@ -2,16 +2,19 @@ version: "2"
 
 agents:
   root:
-    instruction: You are a personal asisstant
+    instruction: You are an amazing developer
+    add_environment_info: true
+    add_date: true
     model: github-model
     toolsets:
-      - type: memory
-        path: ./memory.db
+      - type: todo
+      - type: shell
+      - type: filesystem
 
 models:
   github-model:
     provider: openai
-    model: xai/grok-3-mini
+    model: gpt-4o
     base_url: https://models.github.ai/inference
     token_key: GITHUB_API_KEY
     track_usage: false

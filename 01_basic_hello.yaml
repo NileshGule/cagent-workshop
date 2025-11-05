@@ -3,10 +3,10 @@ version: "2"
 agents:
   root:
     instruction: Talk like a pirate
-    model: open-router-model
+    model: github-model
 
 models:
-  open-router-model:
+  github-model:
     # provider: openai
     # model: gpt-4o
     # base_url: https://openrouter.ai/api/v1
